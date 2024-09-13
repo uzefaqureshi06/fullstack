@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors');
+const connectDB = require('./db/connection')
 
 //initialize the express application
 const app = express();
@@ -13,6 +14,8 @@ app.use(express.json());
 //setting up the port
 const PORT = 8000
 
+//connecting database 
+connectDB();
 
 //listen the server app on the above port
 app.listen(PORT, () => {
