@@ -1,0 +1,1 @@
+# Step 8 : count the number of fields in models and create that many input field in the component

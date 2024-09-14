@@ -7,4 +7,4 @@
 ### 6 Create Model schema this will be the bullprint for mongodb , this help to understand what user is going to send in request 
 ### 7 Performing create operation, `POST` method is used for creating or inserting anything to database 
 ### first create model , then create route , then add that route in index.js , then create the controller
-
+### 8 Move to frontend
