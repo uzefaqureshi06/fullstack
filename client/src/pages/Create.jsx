@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import { createBlog } from '../actions/blogs'
 const Create = () => {
     const [title, setTitle] = useState('');
     const [image, setImage] = useState('');
     const [content, setContent] = useState('');
+    const dispatch = useDispatch();
     const handleSubmit = async (e) => {
         e.preventDefault();
         const newBlog = { title, image, content }
-        try {
-            const response = await axios.post('http://localhost:8000/post/create', newBlog);
-            console.log(response);
-        } catch (error) {
-            console.log(error);
-        }
+        dispatch(createBlog(newBlog));
     }
     return (
         <>
